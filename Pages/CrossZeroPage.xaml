@@ -1,0 +1,65 @@
+﻿<Page x:Class="CrossZero.Pages.CrossZeroPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CrossZero.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600"
+      Title="CrossZeroPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+            <TextBlock Text="Имя игрока 1:" FontSize="20" VerticalAlignment="Center"/>
+            <TextBlock FontSize="20" Name="TxbPlayer1" VerticalAlignment="Center"/>
+            <TextBlock Text="Знак игрока 1: X" FontSize="20"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Vertical">
+            <TextBlock Text="Имя игрока 2:" FontSize="20" VerticalAlignment="Center" />
+            <TextBlock FontSize="20" Name="TxbPlayer2" VerticalAlignment="Center" />
+            <TextBlock Text="Знак игрока 1: 0" FontSize="20"/>
+        </StackPanel>
+        <Button Height="40" Content="Назад" Name="BtnBack" Grid.ColumnSpan="3" VerticalAlignment="Bottom" Click="BtnBack_Click_1" Margin="10" Style="{StaticResource RndBtnStl}"/>
+        <Button Height="40" Content="Новая игра" Name="BtnNewGame" Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Top" Click="BtnNewGame_Click" Margin="10" Style="{StaticResource RndBtnStl}"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Name="PlayerTurn" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Name="button00" Margin="2" Grid.Row="0" Grid.Column="0" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+            <Button Name="button01" Margin="2" Grid.Row="0" Grid.Column="1" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+            <Button Name="button02" Margin="2" Grid.Row="0" Grid.Column="2" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+
+            <Button Name="button10" Margin="2" Grid.Row="1" Grid.Column="0" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+            <Button Name="button11" Margin="2" Grid.Row="1" Grid.Column="1" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+            <Button Name="button12" Margin="2" Grid.Row="1" Grid.Column="2" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+
+            <Button Name="button20" Margin="2" Grid.Row="2" Grid.Column="0" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+            <Button Name="button21" Margin="2" Grid.Row="2" Grid.Column="1" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+            <Button Name="button22" Margin="2" Grid.Row="2" Grid.Column="2" Content="" Click="Button_Click" Style="{StaticResource RndBtnStl}"/>
+        </Grid>
+    </Grid>
+</Page>

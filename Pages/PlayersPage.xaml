@@ -1,0 +1,48 @@
+﻿<Page x:Class="CrossZero.Pages.PlayersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CrossZero.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PlayersPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Margin="5">
+            <TextBlock Text="Введите имя:" FontSize="20"/>
+            <TextBox
+                FontSize="16"
+                Height="25"
+                Style="{StaticResource RoundedTextBox}"
+                Margin="2"
+                Name="TxbNamePlayer1"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="5">
+            <TextBlock Text="Введите имя" FontSize="20"/>
+            <TextBox
+                FontSize="16"
+                Height="25"
+                Style="{StaticResource RoundedTextBox}"
+                Margin="2"
+                Name="TxbNamePlayer2"/>
+        </StackPanel>
+        <Button Content="В игру"
+                Margin="2"
+                Grid.Row="1"
+                Style="{StaticResource RndBtnStl}"
+                VerticalAlignment="Center"
+                Grid.ColumnSpan="2"
+                Height="50"
+                Click="BtnReady_Click"
+                Name="BtnReady"/>
+    </Grid>
+</Page>
